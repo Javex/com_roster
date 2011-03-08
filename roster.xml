@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+<name>Roster</name>
+<!-- The following elements are optional and free of formatting constraints -->
+<creationDate>2011-03-02</creationDate>
+<author>Florian Rüchel</author>
+<authorEmail>florian.ruechel@gmail.com</authorEmail>
+<copyright>GPL</copyright>
+<!--  The version string is recorded in the components table -->
+<version>1.0.6</version>
+<!-- The description is optional and defaults to the name -->
+<description>Enables displaying a Roster of fellow raiders on your page.</description>
+ 
+ <languages folder="site/languages">
+	<language tag="en-GB">en-GB/en-GB.com_roster.ini</language>
+	<language tag="de-DE">de-DE/de-DE.com_roster.ini</language>
+ </languages>
+
+<files folder="site">
+	<filename>controller.php</filename>
+	<filename>roster.php</filename>
+	<filename>index.html</filename>
+	<folder>models</folder>
+	<folder>views</folder>
+</files>
+ 
+<administration>
+	<languages folder="admin/languages">
+		<language tag="en-GB">en-GB/en-GB.com_roster.ini</language>
+		<language tag="de-DE">de-DE/de-DE.com_roster.ini</language>
+	</languages>
+	<!-- Administration Menu Section -->
+	<menu img="components/com_roster/images/favicon.ico" link="option=com_roster">Roster Display</menu>
+	<submenu>
+		<menu img="components/com_roster/images/favicon.ico" link="option=com_roster&amp;view=cpanel">Control Panel</menu>
+		<menu img="components/com_roster/images/menu_roster.png" link="option=com_roster&amp;view=roster">Roster</menu>
+		<menu img="components/com_roster/images/menu_classes.png" link="option=com_roster&amp;view=classes">Classes</menu>
+		<menu img="components/com_roster/images/menu_ranks.png" link="option=com_roster&amp;view=ranks">Ranks</menu>
+		<menu img="components/com_roster/images/menu_races.png" link="option=com_roster&amp;view=races">Races</menu>
+		<menu img="components/com_roster/images/menu_roles.png" link="option=com_roster&amp;view=roles">Roles</menu>
+	</submenu>
+	<!-- Administration Main File Copy Section -->
+	<files folder="admin">
+		<filename>controller.php</filename>
+		<filename>roster.php</filename>
+		<filename>index.html</filename>
+		<filename>install.sql</filename>
+		<filename>uninstall.sql</filename>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</files>
+	<install>
+	<sql>
+		<file charset="utf8" driver="mysql">install.sql</file>
+	</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+		</sql>
+	</uninstall> 
+</administration>
+</install>
